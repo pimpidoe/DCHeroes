@@ -1,0 +1,37 @@
+body{
+  margin: 0px;
+  overflow-y: hidden;
+}
+
+#header {
+  height: 100px;
+  background-color: ;
+  padding: 20px;
+}
+
+#main-container {
+  height: calc(100vh - 162px);
+}
+
+#main-left {
+  float: left;
+  width: 410px;
+  height: 100%;
+  overflow: auto;
+  background-color: lightblue;
+}
+
+#main-center {
+  float: left;
+  width: 510px;
+  height: 100%;
+  overflow: auto;
+  }
+
+#main-right {
+  float: left;
+  width: 608px;
+  height: 100%;
+  overflow: auto;
+  background-color: lightblue;
+}
