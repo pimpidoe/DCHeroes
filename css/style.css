@@ -1,37 +1,273 @@
+@import url(//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css);
+
 body{
   margin: 0px;
   overflow-y: hidden;
 }
 
+ul {
+  list-style: none;
+}
+
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
 #header {
-  height: 100px;
+  height: 200px;
   background-color: ;
   padding: 20px;
 }
 
+#header-logo {
+  height: 200px;
+  float: left;
+}
+
+#header-logo:hover {
+ -moz-transfrom: scale(1.1);
+ -webkit-transfrom: scale(1.1);
+ transform: scale(1.1);
+}
+
+#header-tekst {
+  height: 200px;
+}
+
+#header-img {
+  height: 200px;
+  width: 560px;
+  float: right;
+}
+
 #main-container {
-  height: calc(100vh - 162px);
+  width: 100%;
+  height: calc(100vh - 230px);
 }
 
 #main-left {
   float: left;
-  width: 410px;
+  width: 33%;
   height: 100%;
   overflow: auto;
-  background-color: lightblue;
+  background-color: lightslategrey;
+}
+
+.team {
+  background-color: black;
+  margin-right: 25px;
+  margin-left: -15px;
+}
+
+.team:hover {
+ -moz-transfrom: scale(1.05);
+ -webkit-transfrom: scale(1.05);
+ transform: scale(1.05);
+}
+
+.t-title {
+  color: black;
+  background-color: red;
+  text-align: center;
+}
+
+.t-img {
+  background-color: red;
+  margin-left: 75px;
+  height: 180px;
+  width: 288px;
+}
+
+.t-description {
+  text-align: center;
+  color: red;
+}
+
+.t-button {
+  color: black;
+  background-color: red;
+  text-align: center;
 }
 
 #main-center {
   float: left;
-  width: 510px;
+  width: 33%;
   height: 100%;
   overflow: auto;
   }
 
+  .hero {
+    background-color: black;
+    margin-right: 25px;
+    margin-left: 25px;
+  }
+
+  .hero:hover {
+   -moz-transfrom: scale(1.05);
+   -webkit-transfrom: scale(1.05);
+   transform: scale(1.05);
+  }
+
+  .h-title {
+    color: black;
+    background-color: red;
+    text-align: center;
+  }
+
+  .h-img {
+    background-color: red;
+    margin-left: 80px;
+    height: 180px;
+    width: 288px;
+  }
+
+  .h-description {
+    text-align: center;
+    color: red;
+  }
+
+  .h-button {
+    color: black;
+    background-color: red;
+    text-align: center;
+  }
+
 #main-right {
   float: left;
-  width: 608px;
+  width: 33%;
   height: 100%;
   overflow: auto;
-  background-color: lightblue;
+  background-color: lightslategrey;
+}
+
+.info {
+  background-color: black;
+  margin-right: 25px;
+  margin-left: 25px;
+}
+
+.info-title {
+  color: black;
+  background-color: red;
+  text-align: center;
+}
+
+.info-img {
+  background-color: red;
+  margin-left: 80px;
+  height: 180px;
+  width: 288px;
+}
+
+.info-description {
+  text-align: center;
+  color: red;
+}
+
+.form-rate {
+  width: 500px;
+  margin: 0 auto;
+}
+
+fieldset {
+  border: 0;
+}
+
+.rate
+{
+    display: inline-block;
+    border: 0;
+    position: relative;
+    padding-left: 10px;
+    float: left;
+}
+
+/* Hide radio */
+.rate > input[type='radio']
+{
+    display: none;
+}
+/* Order correctly by floating highest to the right */
+.rate > label.lblRating
+{
+    float: right;
+    color: red;
+}
+
+/* The star of the show */
+.rate > label.lblRating:before
+{
+    display: inline-block;
+    font-size: 4.0rem;
+    padding: .3rem .2rem;
+    margin: 0;
+    cursor: pointer;
+    font-family: FontAwesome;
+    content: "\f005 "; /* full star */
+}
+/* Zero stars rating */
+.rate > label.lblRating:last-child:before
+{
+    content: "\f006 "; /* empty star outline */
+}
+/* Half star trick */
+.rate label.half:before
+{
+    content: "\f089 "; /* half star no outline */
+    position: absolute;
+    padding-right: 0;
+}
+/* Click + hover color */
+input:checked ~ label.lblRating, /* color current and previous stars on checked */
+label.lblRating:hover, label.lblRating:hover ~ label.lblRating /* color previous stars on hover */
+{
+    color: #ffd900;
+}
+
+/ Hover highlights /
+input:checked + label.lblRating:hover, input:checked ~ label.lblRating:hover, /* highlight current and previous stars */
+input:checked ~ label.lblRating:hover ~ label.lblRating, /* highlight previous selected stars for new rating */
+label.lblRating:hover ~ input:checked ~ label.lblRating /* highlight previous selected stars */
+{
+    color: #f0cc00;
+}
+
+.text-review {
+  width: 400px;
+  max-width: 400px;
+  height: 100px;
+}
+
+.review-btn {
+  background-color: red;
+  color: black;
+  padding: 14px 20px;
+  position: relative;
+  margin-left: 160px;
+  margin-bottom: 10px;
+  border: none;
+  cursor: pointer;
+  width: 100px;
+}
+
+.review-btn:hover {
+  color: black;
+  background-color: #f0cc00;
+}
+
+#footer {
+  background-color: rgba(0, 0, 0, 0.0);
+  z-index: 4;
+  height: 40px;
+  width: 1000px;
+  left: 260px;
+  position: relative;
+  padding-top: 5px;
+  text-align: center;
+  color: white;
+  font-family: "Impact";
 }
