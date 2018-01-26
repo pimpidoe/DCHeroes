@@ -86,6 +86,24 @@ $heroId = 0;
          </div>
       </fieldset>
    </form>
+   <?php include 'js/review.js'; ?>
+   <button id="showReviews" = onclick="review()">Show the reviews</button>
+   <div id="review-text">
+     <?php
+   $sql ="SELECT * FROM rating Where heroid='".$heroId."'";
+   $result = $conn->query($sql);
+
+if ($result->num_rows > 0) {
+   echo "<table><tr><th>RatingDate</th><th>Rating:</th><th>Review's:</th></tr>";
+   // output data of each row
+   while ($row = $result->fetch_assoc()) {
+       echo "<tr><td>" . strftime("%d-%I-%Y \n %X", $row["ratingDate"]). "</td><td>" . $row["rating"]. "</td><td>" . $row["ratingReview"]. "</td></tr>";
+   }
+   echo "</table>";
+} else {
+   echo "0 results";
+} ?>
+   </div>
  </div>
  <?php
     }

@@ -1,6 +1,5 @@
 @import url(//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css);
-
-body{
+body {
   margin: 0px;
   overflow-y: hidden;
 }
@@ -17,6 +16,20 @@ a {
   text-decoration: none;
 }
 
+
+table{
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  margin-bottom: 20px;
+  width: 100%
+}
+td, th {
+  border: 1px solid #dddddd;
+  color: white;
+  padding: 8px;
+}
+
+
 #header {
   height: 200px;
   background-color: ;
@@ -29,9 +42,9 @@ a {
 }
 
 #header-logo:hover {
- -moz-transfrom: scale(1.1);
- -webkit-transfrom: scale(1.1);
- transform: scale(1.1);
+  -moz-transfrom: scale(1.1);
+  -webkit-transfrom: scale(1.1);
+  transform: scale(1.1);
 }
 
 #header-tekst {
@@ -64,9 +77,9 @@ a {
 }
 
 .team:hover {
- -moz-transfrom: scale(1.05);
- -webkit-transfrom: scale(1.05);
- transform: scale(1.05);
+  -moz-transfrom: scale(1.05);
+  -webkit-transfrom: scale(1.05);
+  transform: scale(1.05);
 }
 
 .t-title {
@@ -98,43 +111,49 @@ a {
   width: 33%;
   height: 100%;
   overflow: auto;
-  }
+}
 
-  .hero {
-    background-color: black;
-    margin-right: 25px;
-    margin-left: 25px;
-  }
+.hero:nth-child(odd) {
+  background-color: lightslategrey;
+  margin-right: 25px;
+  margin-left: 25px;
+}
 
-  .hero:hover {
-   -moz-transfrom: scale(1.05);
-   -webkit-transfrom: scale(1.05);
-   transform: scale(1.05);
-  }
+.hero:nth-child(even) {
+  background-color: black;
+  margin-right: 25px;
+  margin-left: 25px;
+}
 
-  .h-title {
-    color: black;
-    background-color: red;
-    text-align: center;
-  }
+.hero:hover {
+  -moz-transfrom: scale(1.05);
+  -webkit-transfrom: scale(1.05);
+  transform: scale(1.05);
+}
 
-  .h-img {
-    background-color: red;
-    margin-left: 80px;
-    height: 180px;
-    width: 288px;
-  }
+.h-title {
+  color: black;
+  background-color: red;
+  text-align: center;
+}
 
-  .h-description {
-    text-align: center;
-    color: red;
-  }
+.h-img {
+  background-color: red;
+  margin-left: 80px;
+  height: 180px;
+  width: 288px;
+}
 
-  .h-button {
-    color: black;
-    background-color: red;
-    text-align: center;
-  }
+.h-description {
+  text-align: center;
+  color: red;
+}
+
+.h-button {
+  color: black;
+  background-color: red;
+  text-align: center;
+}
 
 #main-right {
   float: left;
@@ -177,69 +196,86 @@ fieldset {
   border: 0;
 }
 
-.rate
-{
-    display: inline-block;
-    border: 0;
-    position: relative;
-    padding-left: 10px;
-    float: left;
+.rate {
+  display: inline-block;
+  border: 0;
+  position: relative;
+  padding-left: 10px;
+  float: left;
 }
 
 /* Hide radio */
-.rate > input[type='radio']
-{
-    display: none;
+
+.rate>input[type='radio'] {
+  display: none;
 }
+
 /* Order correctly by floating highest to the right */
-.rate > label.lblRating
-{
-    float: right;
-    color: red;
+
+.rate>label.lblRating {
+  float: right;
+  color: red;
 }
 
 /* The star of the show */
-.rate > label.lblRating:before
-{
-    display: inline-block;
-    font-size: 4.0rem;
-    padding: .3rem .2rem;
-    margin: 0;
-    cursor: pointer;
-    font-family: FontAwesome;
-    content: "\f005 "; /* full star */
-}
-/* Zero stars rating */
-.rate > label.lblRating:last-child:before
-{
-    content: "\f006 "; /* empty star outline */
-}
-/* Half star trick */
-.rate label.half:before
-{
-    content: "\f089 "; /* half star no outline */
-    position: absolute;
-    padding-right: 0;
-}
-/* Click + hover color */
-input:checked ~ label.lblRating, /* color current and previous stars on checked */
-label.lblRating:hover, label.lblRating:hover ~ label.lblRating /* color previous stars on hover */
-{
-    color: #ffd900;
+
+.rate>label.lblRating:before {
+  display: inline-block;
+  font-size: 4.0rem;
+  padding: .3rem .2rem;
+  margin: 0;
+  cursor: pointer;
+  font-family: FontAwesome;
+  content: "\f005 ";
+  /* full star */
 }
 
-/ Hover highlights /
-input:checked + label.lblRating:hover, input:checked ~ label.lblRating:hover, /* highlight current and previous stars */
-input:checked ~ label.lblRating:hover ~ label.lblRating, /* highlight previous selected stars for new rating */
-label.lblRating:hover ~ input:checked ~ label.lblRating /* highlight previous selected stars */
-{
-    color: #f0cc00;
+/* Zero stars rating */
+
+.rate>label.lblRating:last-child:before {
+  content: "\f006 ";
+  /* empty star outline */
+}
+
+/* Half star trick */
+
+.rate label.half:before {
+  content: "\f089 ";
+  /* half star no outline */
+  position: absolute;
+  padding-right: 0;
+}
+
+/* Click + hover color */
+
+input:checked~label.lblRating,
+/* color current and previous stars on checked */
+
+label.lblRating:hover, label.lblRating:hover~label.lblRating
+/* color previous stars on hover */
+
+  {
+  color: #ffd900;
+}
+
+/ Hover highlights / input:checked+label.lblRating:hover, input:checked~label.lblRating:hover,
+/* highlight current and previous stars */
+
+input:checked~label.lblRating:hover~label.lblRating,
+/* highlight previous selected stars for new rating */
+
+label.lblRating:hover~input:checked~label.lblRating
+/* highlight previous selected stars */
+
+  {
+  color: #f0cc00;
 }
 
 .text-review {
-  width: 400px;
-  max-width: 400px;
+  width: 380px;
+  max-width: 380px;
   height: 100px;
+  margin-left: 10px;
 }
 
 .review-btn {
@@ -249,6 +285,18 @@ label.lblRating:hover ~ input:checked ~ label.lblRating /* highlight previous se
   position: relative;
   margin-left: 160px;
   margin-bottom: 10px;
+  border: none;
+  cursor: pointer;
+  width: 100px;
+}
+
+#showReviews {
+  background-color: red;
+  color: black;
+  padding: 14px 20px;
+  position: relative;
+  margin-left: 175px;
+  margin-bottom: 20px;
   border: none;
   cursor: pointer;
   width: 100px;
@@ -270,4 +318,8 @@ label.lblRating:hover ~ input:checked ~ label.lblRating /* highlight previous se
   text-align: center;
   color: white;
   font-family: "Impact";
+}
+#review-text{
+  color: white;
+  display: none;
 }
