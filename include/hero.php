@@ -5,7 +5,7 @@
       $idteam = $_GET['teamId'];
       $sql ="SELECT heroId, heroName, heroDescription, heroImage, teamId FROM hero WHERE teamId='".$idteam."'";
       } else {
-          $sql ="SELECT heroId, heroName, heroImage, teamId FROM hero";
+          $sql ="SELECT heroId, heroName, heroDescription, heroImage, teamId FROM hero";
       }
 
  $result = $conn->query($sql);

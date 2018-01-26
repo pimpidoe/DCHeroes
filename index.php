@@ -8,7 +8,7 @@
 	<link rel="shortcut icon" href="img/favicon.png">
 	<link rel="stylesheet" type="text/css" href="css/style.css">
 	<link rel="stylesheet" type="text/css" href="css/font-awesome.min.css">
-	<title>DC Heroes - Code Example Layout</title>
+	<title>DC Heroes</title>
 </head>
 <body>
 
